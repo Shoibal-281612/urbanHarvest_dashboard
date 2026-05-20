@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# 🌿 Urban Harvest – Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.2-blue)](https://reactjs.org/)
+[![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-1.9-purple)](https://redux-toolkit.js.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-## Available Scripts
+A **fully responsive** admin dashboard for a fictional food delivery platform **Urban Harvest**.  
+Built with React, Redux Toolkit, and modern CSS. Includes authentication, dashboard analytics, product management, and real‑time search/filter.
 
-In the project directory, you can run:
+🔐 **Live Demo** – [Insert your Vercel/Netlify link here]  
+📦 **GitHub Repo** – [Insert your repo link here]
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Login Page | Dashboard | Product Management |
+|------------|-----------|---------------------|
+| *Add screenshot* | *Add screenshot* | *Add screenshot* |
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Features
 
-### `npm run build`
+### 🔐 Authentication
+- Login with email/password
+- "Remember Me" option (persists session via localStorage)
+- Protected routes (redirect if not authenticated)
+- Demo credentials provided
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📊 Dashboard
+- Key metrics cards: Total Orders, Revenue, Active Users, Pending Deliveries
+- Recent orders table with status badges
+- Fully responsive grid layout
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📦 Product Management
+- Product cards with image, name, price, status (Available/Out of Stock)
+- **Add new product** modal (name, price, status, image URL)
+- **Delete product** with confirmation
+- **Search/filter** by product name
+- Status tags with color coding
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🧭 Navigation & UI
+- Sidebar with active route highlighting
+- Top header with user profile avatar
+- Mobile‑friendly hamburger menu
+- Smooth hover animations & transitions
 
-### `npm run eject`
+### 🗃️ State Management (Redux)
+- `authSlice` – login/logout, remember me, localStorage sync
+- `productSlice` – add/delete/search products
+- Centralized store with clean slice separation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Technology | Purpose |
+|------------|---------|
+| React 18 | UI library |
+| Redux Toolkit | State management |
+| React Router v6 | Routing & protected routes |
+| React Icons | Icons (FaLeaf, FaBox, FaTruck, etc.) |
+| CSS3 | Custom styling (no external UI library) |
+| LocalStorage | Persist auth session |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📁 Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+urban-harvest-dashboard/
+├── public/
+│ ├── index.html
+│ └── manifest.json
+├── src/
+│ ├── assets/ # Images, logos
+│ ├── components/
+│ │ ├── Layout/ # Sidebar.jsx, Header.jsx + CSS
+│ │ ├── UI/ # Card.jsx, Modal.jsx, ProductCard.jsx, RecentOrdersTable.jsx
+│ │ └── ProtectedRoute.jsx
+│ ├── pages/
+│ │ ├── Login.jsx/.css
+│ │ ├── Dashboard.jsx/.css
+│ │ └── ProductManagement.jsx/.css
+│ ├── store/
+│ │ ├── store.js
+│ │ └── slices/
+│ │ ├── authSlice.js
+│ │ └── productSlice.js
+│ ├── utils/
+│ │ └── mockData.js # Dummy products, orders, stats
+│ ├── App.js/.css
+│ ├── index.js/.css
+│ └── index.js
+├── .gitignore
+├── package.json
+├── README.md
+└── vercel.json # (optional, for Vercel deployment)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+text
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prerequisites
+- Node.js (v16 or v18 recommended)
+- npm or yarn
 
-### Making a Progressive Web App
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/urban-harvest-dashboard.git
+   cd urban-harvest-dashboard
 
-### Advanced Configuration
+2. Install Dependencies
+npm install
+# or
+yarn install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Start the Deployment server
+npm start
+Open http://localhost:3000 to view it in the browser.
 
-### Deployment
+4. Build for production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+bash
+npm run build
+Creates an optimized build/ folder.
 
-### `npm run build` fails to minify
+🔑 Demo Login
+Use the following credentials to access the dashboard:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Field	Value
+Email	admin@urbanharvest.com
+Password	harvest123
+✅ Check "Remember Me" to stay logged in after page refresh.
+
+📱 Responsive Breakpoints
+Device	Sidebar	Cards	Table
+Desktop (>1024px)	Fixed	4 columns	Full width
+Tablet (768px–1024px)	Collapsible	2–3 columns	Horizontal scroll
+Mobile (<768px)	Hamburger menu	1 column	Horizontal scroll
